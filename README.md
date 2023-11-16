@@ -1,6 +1,6 @@
 # Notes when testing the demo account in the WB Enterprise account
 
-## Clientsr
+## Client
 
 ### GitHub Desktop
 
@@ -39,8 +39,6 @@ Added GitKraken to approved third-party application: https://github.com/organiza
 Works without action: FALSE
 
 **Action needed**: User needs to log out and then log back in
-
-##
 
 ## Settings
 
