@@ -26,4 +26,10 @@ Works without action: FALSE
 
 ## GitKraken
 
+Added GitKraken to approved third-party application: https://github.com/organizations/wbgdemo/settings/oauth_application_policy
+
 ### WB computer
+
+Works without action: FALSE
+
+**Action needed**: User needs to log out and then log back in
