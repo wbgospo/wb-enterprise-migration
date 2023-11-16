@@ -1,19 +1,19 @@
 # Notes when testing the demo account in the WB Enterprise account
 
-# Clients
+## Clients
 
-## GitHub Desktop
+### GitHub Desktop
 
-### WB computer
+#### WB computer
 
 Works without action: FALSE
 
 **Action needed**: User needs to log out and then log in again to use repos in accounts in the enterprise account
 
 
-## Git bash
+### Git bash
 
-### WB computer
+#### WB computer
 
 Works without action: FALSE
 
@@ -24,16 +24,16 @@ Works without action: FALSE
 3. Expand that item and click "Remove"
 4. Go back to git bash and run any command that needs authentication. `git push`, `git pull` (on a private repo), `git clone` etc.
 
-## VSCode
+### VSCode
 
-### WB computer
+#### WB computer
 If having Git Bash installed on the computer and choosing that as the terminal in VSCode, then that works given that Git bash has been setup as described above.
 
-## GitKraken
+### GitKraken
 
 Added GitKraken to approved third-party application: https://github.com/organizations/wbgdemo/settings/oauth_application_policy
 
-### WB computer
+#### WB computer
 
 Works without action: FALSE
 
