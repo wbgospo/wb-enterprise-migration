@@ -1,15 +1,16 @@
 # Notes when testing the demo account in the WB Enterprise account
 
-## Clients
+## Clientsr
 
 ### GitHub Desktop
 
-#### WB computer
+#### WB computer - member
 
 Works without action: FALSE
 
 **Action needed**: User needs to log out and then log in again to use repos in accounts in the enterprise account
 
+#### WB computer - external
 
 ### Git bash
 
@@ -39,6 +40,7 @@ Works without action: FALSE
 
 **Action needed**: User needs to log out and then log back in
 
+##
 
 ## Settings
 
