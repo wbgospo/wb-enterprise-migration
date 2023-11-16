@@ -55,3 +55,5 @@ Currently this is set on enterprise level that members can create public and pri
 If enabled, members with admin permissions for the repository will be able to delete or transfer public and private repositories. If disabled, only organization owners can delete or transfer repositories.
 
 This is enabled on the enterprise level. We would like to disable this option as we do not want the risk that a team member by accident (or maliciously) transfer away or delete a repo.
+
+This is Roshni's edit - hello grumpy STC
