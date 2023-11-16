@@ -23,3 +23,7 @@ Works without action: FALSE
 2. Look in the "Windows Credentials" tab for the `git:https://github.com` item
 3. Expand that item and click "Remove"
 4. Go back to git bash and run any command that needs authentication. `git push`, `git pull` (on a private repo), `git clone` etc.
+
+## GitKraken
+
+### WB computer
