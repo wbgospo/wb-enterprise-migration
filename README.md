@@ -24,6 +24,11 @@ Works without action: FALSE
 3. Expand that item and click "Remove"
 4. Go back to git bash and run any command that needs authentication. `git push`, `git pull` (on a private repo), `git clone` etc.
 
+## VSCode
+
+### WB computer
+If having Git Bash installed on the computer and choosing that as the terminal in VSCode, then that works given that Git bash has been setup as described above.
+
 ## GitKraken
 
 Added GitKraken to approved third-party application: https://github.com/organizations/wbgdemo/settings/oauth_application_policy
