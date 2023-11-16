@@ -38,3 +38,20 @@ Added GitKraken to approved third-party application: https://github.com/organiza
 Works without action: FALSE
 
 **Action needed**: User needs to log out and then log back in
+
+
+## Settings
+
+### Repo creation
+
+> Members will be able to create only selected repository types. Outside collaborators can never create repositories.
+
+We want to be in control of the repos to be created on our account. So we would like to be able to disable the possibility for members to create repos of all types.
+
+Currently this is set on enterprise level that members can create public and private repos but not internal repos. We think this should be up to each account owner.
+
+### Delete and transfer repos
+> Allow members to delete or transfer repositories for this organization
+If enabled, members with admin permissions for the repository will be able to delete or transfer public and private repositories. If disabled, only organization owners can delete or transfer repositories.
+
+This is enabled on the enterprise level. We would like to disable this option as we do not want the risk that a team member by accident (or maliciously) transfer away or delete a repo.
