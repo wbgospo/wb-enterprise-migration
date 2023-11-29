@@ -42,6 +42,11 @@ Works without action: FALSE
 
 **Action needed**: User needs to log out and then log back in
 
+### RStudio
+
+#### WB computer
+Works without action: TRUE. However, I deleted the credentials before trying this as I tried GitBash first. 
+
 ## Settings
 
 ### Repo creation
