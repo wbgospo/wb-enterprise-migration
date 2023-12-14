@@ -16,7 +16,7 @@ The first time you push to an account migrated to the WB Enterprise Account usin
 you will need to log out and log in again in GitHub Desktop. 
 If you do not do this, you will get an error that you do not have access to that repository.
 
-To do this, go to GitHub Desktop. Then go to `File` -> `Options` - `Account`.
+To do this, go to GitHub Desktop. Then go to `File` -> `Options` -> `Account`.
 Select GitHub.com and sign out and then sign in again.
 You will then be able to push to the repository.
 
