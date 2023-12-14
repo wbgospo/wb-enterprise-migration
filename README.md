@@ -1,64 +1,54 @@
-# Notes when testing the demo account in the WB Enterprise account
+# Guidelines for Access after Migration to the WB Enterprise account
 
-## Client
+## Browser access
+
+Accessing any non-public page on an account migrated to the WB Enterprise requires SSO log in. 
+If you are connecting from a WB computer, then the SSO will be automatic. 
+If you are connecting from a personal computer, then you need to log in using your YubiKey.
+
+SSO log-in is not required for external collaborators.
+
+## Clients
 
 ### GitHub Desktop
 
-#### WB computer - member
+The first time you push to an account migrated to the WB Enterprise account using GitHub Desktop,
+you will need to log out and log in again in GitHub Desktop. 
+If you do not do this, you will get an error that you do not have access to that repository.
 
-Works without action: FALSE
+To do this, go to GitHub desktop. Then go to `File` -> `Options` - `Account`.
+Select GitHub.com and sign out and then sign in again.
+You will then be able to push to the repository.
 
-**Action needed**: User needs to log out and then log in again to use repos in accounts in the enterprise account
+This does not apply to external users.
 
-#### WB computer - external
+### Git bash/Git CLI
 
-Works without action: TRUE
+The first time you push to an account migrated to the WB Enterprise account using Git bash/Git CLI,
+you will need to refresh your credentials.
 
-### Git bash
-
-#### WB computer
-
-Works without action: FALSE
-
-**Action needed**: User needs to delete the credentials in the credential manager and then pull.
+To do so on a Windows computer, follow these instructions:
 
 1. Search for "Credential Manager" in the windows menu
 2. Look in the "Windows Credentials" tab for the `git:https://github.com` item
 3. Expand that item and click "Remove"
-4. Go back to git bash and run any command that needs authentication. `git push`, `git pull` (on a private repo), `git clone` etc.
+4. Go back to Git bash/Git CLI and run any command that needs authentication. `git push`, `git pull` (on a private repo), etc.
+5. Follow the authentication steps.
 
-### VSCode
+This does not apply to external users.
 
-#### WB computer
-If having Git Bash installed on the computer and choosing that as the terminal in VSCode, then that works given that Git bash has been setup as described above.
+### VSCode, RStudio and other IDEs using Git bash/Git CLI
+
+The first time you push to an account migrated to the WB Enterprise account using an IDE that uses Git bash/Git CLI,
+you will need to follow the instructions in the Git bash/Git CLI section above.
+
+This does not apply to external users.
 
 ### GitKraken
 
-Added GitKraken to approved third-party application: https://github.com/organizations/wbgdemo/settings/oauth_application_policy
+The first time you push to an account migrated to the WB Enterprise account using GitKraken,
+you will, similarly to GitHub Desktop log out and log in again in GitKraken.
 
-#### WB computer
+To do so, go to `File` -> `Preferences` -> `Integration` -> `GitHub` and then click `Disconnect`. 
+Then log in again.
 
-Works without action: FALSE
-
-**Action needed**: User needs to log out and then log back in
-
-### RStudio
-
-#### WB computer
-Works without action: TRUE. However, I deleted the credentials before trying this as I tried GitBash first. 
-
-## Settings
-
-### Repo creation
-
-> Members will be able to create only selected repository types. Outside collaborators can never create repositories.
-
-We want to be in control of the repos to be created on our account. So we would like to be able to disable the possibility for members to create repos of all types.
-
-Currently this is set on enterprise level that members can create public and private repos but not internal repos. We think this should be up to each account owner.
-
-### Delete and transfer repos
-> Allow members to delete or transfer repositories for this organization
-If enabled, members with admin permissions for the repository will be able to delete or transfer public and private repositories. If disabled, only organization owners can delete or transfer repositories.
-
-This is enabled on the enterprise level. We would like to disable this option as we do not want the risk that a team member by accident (or maliciously) transfer away or delete a repo.
