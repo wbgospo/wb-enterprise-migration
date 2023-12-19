@@ -8,6 +8,17 @@ If you are connecting from a personal computer, then you need to log in using yo
 
 SSO login is not required for external collaborators.
 
+## App Access
+
+Accessing repos hosted on the WB Enterprise Account can be accessed in the GitHub app
+([iOS app](https://apps.apple.com/us/app/github/id1477376905)/[Android app](https://play.google.com/store/apps/details?id=com.github.android))
+after you have logged out and logged in again. 
+When logging in again you will be asked to authenticate accounts hosted in the Enterprise plan.
+
+On a WB managed smart phone you can just click authenticate and the SSO authentication is automatic.
+
+We are currently working on a solution for personal smart phones. 
+
 ## Clients
 
 ### GitHub Desktop
