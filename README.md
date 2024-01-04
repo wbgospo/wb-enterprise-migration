@@ -92,6 +92,26 @@ of the WB Enterprise managed GitHub account,
 and `<REPOSITORY>` with the name of the repository.
 Unfortunately, you need to do this once per repository.
 
+### Access tokens
+
+Access tokens can be used in scripts to
+authenticate a GitHub user on Github.com.
+However, in order for a token to work on a repo hosted on a
+WB Enterprise managed account,
+the token needs to be added to the WB Single Sign-On.
+Follow these instructions to do so:
+
+1. Go to the access token page on your account: https://github.com/settings/tokens
+2. For the token you want to use on the WB Enterprise hosted repo,
+click `Configure SSO`.
+  - Select the account you want to use this key for.
+  (Note that you first need to be a member of the account
+  for it to appear there).
+  - After selecting the account, you need to log in to the WB intranet.
+  If you are not using a WB computer (virtual or physical),
+  you need to use your YubiKey.
+  This step only needs to be done once for each new key.
+
 ### VSCode, RStudio, and other IDEs using Git Bash/Git CLI
 
 The first time you push to an account migrated to the WB Enterprise Account using an IDE that uses Git Bash/Git CLI,
