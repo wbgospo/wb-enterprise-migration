@@ -1,5 +1,22 @@
 # Guidelines for Access after Migration to the WB Enterprise Account
 
+--- 
+
+## SSO authentical on Personal computer/mobiles vs. WB managed computers/mobiles
+
+Any organization GitHub account linked to the WB enterprise account will use what is called SSO when authenticating a user.
+What SSO means in practice differ depending on you use a World Bank owned or personal owned computer.
+If you are following the instructions below on a World Bank managed device, then SSO is automatic. 
+You will be redirected to a page and then automatically redirected back to the page you tried to access.
+
+However, if you are using a personal device, then you will be redirected to the same page, but at that page you will be asked to log in on your World Bank account. 
+Typically you will use your Yubikey to log in to your World Bank account. This should be possible to use on most use cases listed below. 
+The one use case we know it does not work is on the GitHub mobile app. 
+SSO authentication will only work in the app on World Bank owned cell phones.
+You can always use the app to access repositories that are not hosted on a World Bank owned account.
+
+---
+
 ## Browser Access
 
 Accessing any non-public page on an account migrated to the WB Enterprise Account requires SSO login.
