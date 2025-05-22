@@ -109,25 +109,45 @@ of the WB Enterprise managed GitHub account,
 and `<REPOSITORY>` with the name of the repository.
 Unfortunately, you need to do this once per repository.
 
-### Access tokens
+### Access Tokens
 
-Access tokens can be used in scripts to
-authenticate a GitHub user on Github.com.
-However, in order for a token to work on a repo hosted on a
-WB Enterprise managed account,
-the token needs to be added to the WB Single Sign-On.
-Follow these instructions to do so:
+Access tokens can be used to authenticate a GitHub user on GitHub.com. There are two types of tokens: classic tokens and fine-grained tokens. 
 
-1. Go to the access token page on your account: https://github.com/settings/tokens
-2. For the token you want to use on the WB Enterprise hosted repo,
-click `Configure SSO`.
-  - Select the account you want to use this key for.
-  (Note that you first need to be a member of the account
-  for it to appear there).
-  - After selecting the account, you need to log in to the WB intranet.
-  If you are not using a WB computer (virtual or physical),
-  you need to use your YubiKey.
-  This step only needs to be done once for each new key.
+Classic tokens will eventually be discontinued as fine-grained tokens are considered better practice. However, fine-grained tokens require approval by the account owner. If you know who owns the account for which you are creating the token, you can create a fine-grained token. Otherwise, you can create a classic token as long as they are still allowed.
+
+To create a classic token, visit https://github.com/settings/personal-access-tokens. To create a fine-grained token, visit https://github.com/settings/tokens. Regardless of the type, you will only see the token once after it is created. Make sure to copy it and store it securely, such as in a password manager. GitHub will not be able to show you the token again. If you lose the token, you can always generate a new one.
+
+When creating the token, you need to do the following two things. There are some differences depending on the type of token you create:
+- Assign permission scopes
+- Configure WB Single Sign-On (SSO)
+
+#### Permission Scopes
+
+Permission scopes define what the token is allowed to do. If you create a token without permissions, it can only authenticate that it is your token, but it will not authorize any actions, even those you usually have access to. It is considered best practice to grant the least amount of access necessary.
+
+For fine-grained tokens, you select a single organization account for which the token will be valid. Classic tokens can be used for multiple accounts.
+
+Permissions have different names depending on the type of token. For example, if you only need the token for contributing to a repository (e.g., clone, push, pull), you need:
+- **Contents** permission for fine-grained tokens
+- **Repo** permission for classic tokens
+
+If you need tokens for other purposes, you should review the available permissions.
+
+Note that permissions granted to a classic token apply to all repositories you have access to. This is especially important if you assign broad permissions. If the token is leaked, anyone with the token can perform those actions in your name.
+
+Fine-grained tokens, in contrast, are valid only for a single organization account (or your personal account). Additionally, you can set permissions at the repository level, which is why they are considered more secure.
+
+#### WB Single Sign-On (SSO)
+
+All authentication to GitHub organization accounts within the WB Enterprise subscription by members of those accounts (i.e., not external collaborators) must be configured with WB SSO authentication.
+
+For fine-grained tokens, the token will not be valid until an owner of the organization approves it, unless you are the owner of the account or the token is for your personal account. Once approved, the SSO is configured.
+
+For classic tokens, you can configure SSO yourself after the token is created:
+1. Click **Configure SSO** for the token.
+2. Select the account you want to use the token for. (You must already be a member of the account for it to appear.)
+3. After selecting the account, log in to the WB intranet. If you are not using a WB computer (virtual or physical), you will need to use your YubiKey.
+
 
 ### VSCode, RStudio, and other IDEs using Git Bash/Git CLI
 
