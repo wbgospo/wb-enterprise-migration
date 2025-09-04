@@ -115,7 +115,7 @@ Access tokens can be used to authenticate a GitHub user on GitHub.com. There are
 
 Classic tokens will eventually be discontinued as fine-grained tokens are considered better practice. However, fine-grained tokens require approval by the account owner. If you know who owns the account for which you are creating the token, you can create a fine-grained token. Otherwise, you can create a classic token as long as they are still allowed.
 
-To create a classic token, visit https://github.com/settings/personal-access-tokens. To create a fine-grained token, visit https://github.com/settings/tokens. Regardless of the type, you will only see the token once after it is created. Make sure to copy it and store it securely, such as in a password manager. GitHub will not be able to show you the token again. If you lose the token, you can always generate a new one.
+To create a classic token, visit https://github.com/settings/personal-access-tokens. To create a fine-grained token, visit https://github.com/settings/tokens. Regardless of the type, you will only see the token once after it is created. Make sure to copy it and store it securely, such as in a password manager. GitHub will not be able to show you the token again. If you lose the token, you can always generate a new one. Always make sure to delete the token on GitHub.com if you think there is any risk the token might have been leaked.
 
 When creating the token, you need to do the following two things. There are some differences depending on the type of token you create:
 - Assign permission scopes
